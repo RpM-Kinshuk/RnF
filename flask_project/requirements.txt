@@ -1,0 +1,12 @@
+numpy
+matplotlib
+pandas
+qrcode
+pyqrcode
+pyttsx3
+pillow
+Keras
+scikit-learn
+flask
+virtualenv
+Flask-Mail

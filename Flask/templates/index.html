@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h2>Hello, Welcome to our Rainfall Prediction page!</h2>
+    <br> <br>
+    <form action = "/output" method = "post">
+        <!-- {% for item in menu %}
+            <input type="radio" name="menu" value="{{ item }}"> {{ item }} <br>
+        {% endfor %}
+        <br> <br> -->
+        Enter Month and Day:
+        <select name="month">
+                <option disabled selected value> Select Month </option>
+            {% for month in months %}
+                <option value="{{ month }}"> {{ month }}</option>
+            {% endfor %}
+        </select>
+        <select name="day">
+                <option disabled selected value> Select Day </option>
+            {% for i in range (1, 32) %}
+                <option value="{{ i }}"> {{ i }}</option>
+            {% endfor %}
+        </select>
+        <br> <br>
+        Enter Temperature:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input required autocomplete ="off" type="text" name="temp" placeholder="Enter Temperature">
+        <br> <br>
+        Enter Specific Humidity:
+        <input required autocomplete ="off" type="text" name="sphum" placeholder="Enter Specific Humidity">
+        <br> <br>
+        Enter Relative Humidity:
+        <input required autocomplete ="off" type="text" name="relhum" placeholder="Enter Relative Humidity">
+        <br> <br>
+        <input type="submit" value="Go" name="data">
+    </form>
+
+{% endblock %}
