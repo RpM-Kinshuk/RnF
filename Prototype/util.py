@@ -18,5 +18,5 @@ def load_data():
     yr = data['Year']
     return x, y, m, tmp, humidity, yr
 
-def givepw():
-    return "R@r58r#$"
+def givename():
+    return 'Swift'
